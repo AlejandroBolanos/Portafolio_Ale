@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog"
-import { cn } from "@/lib/utils"
+
 
 const links = {
   github: "https://github.com/AlejandroBolanos",

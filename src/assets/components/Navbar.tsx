@@ -1,12 +1,11 @@
 "use client"
 
-import { useState } from "react"
+
 import { Menu } from "lucide-react"
 import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
     { name: "Inicio", href: "#" },
@@ -53,7 +52,6 @@ export function Navbar() {
                   key={item.name}
                   href={item.href}
                   className="text-lg font-medium transition-colors hover:text-primary"
-                  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>

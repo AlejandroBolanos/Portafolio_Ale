@@ -26,7 +26,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, img, tags, githubUrl, liveUrl, descripcionDetallada }: ProjectCardProps) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [] = useState(false)
 
   return (
     <Card className="overflow-hidden bg-red">
