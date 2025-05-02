@@ -29,7 +29,7 @@ export function ProjectCard({ title, description, img, tags, githubUrl, liveUrl,
   const [] = useState(false)
 
   return (
-    <Card className="overflow-hidden bg-red">
+    <Card className="overflow-hidden bg-[#22252e]">
       <div className="aspect-video relative overflow-hidden flex items-center justify-center">
         <img
           src={img || "/placeholder.svg"}
@@ -54,14 +54,14 @@ export function ProjectCard({ title, description, img, tags, githubUrl, liveUrl,
       <CardFooter className="flex justify-between">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline">Ver Detalles</Button>
+            <Button  variant="customRed">Ver Detalles</Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[625px]">
+          <DialogContent className="sm:max-w-[625px] bg-[#22252e]">
             <DialogHeader>
               <DialogTitle>{title}</DialogTitle>
               <DialogDescription>{description}</DialogDescription>
             </DialogHeader>
-            <div className="grid gap-4 py-4">
+            <div className="grid gap-4 py-4 bg-[#22252e]">
               <div className="aspect-video relative overflow-hidden rounded-lg">
                 <img src={img || "/placeholder.svg"} alt={title} className="object-cover" />
               </div>
@@ -83,7 +83,7 @@ export function ProjectCard({ title, description, img, tags, githubUrl, liveUrl,
               </div>
               <div className="flex gap-4 mt-2">
                 {githubUrl && (
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="customRed" size="sm" asChild>
                     <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
                       Código

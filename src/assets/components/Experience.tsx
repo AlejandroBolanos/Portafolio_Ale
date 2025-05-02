@@ -117,7 +117,7 @@ export function Experience() {
           <TabsContent value="experience" className="space-y-8">
             <div className="grid gap-6">
               {workExperience.map((job, index) => (
-                <Card key={index}>
+                <Card className="bg-[#22252e]" key={index}>
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                       <div>
@@ -147,7 +147,7 @@ export function Experience() {
 
           <TabsContent value="skills">
             <div className="grid gap-8 md:grid-cols-3">
-              <Card>
+              <Card className="bg-[#22252e]">
                 <CardHeader>
                   <CardTitle>Frontend</CardTitle>
                   <CardDescription>Tecnologías de desarrollo frontend</CardDescription>
@@ -164,7 +164,7 @@ export function Experience() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-[#22252e]">
                 <CardHeader>
                   <CardTitle>Backend</CardTitle>
                   <CardDescription>Tecnologías de desarrollo backend</CardDescription>
@@ -181,7 +181,7 @@ export function Experience() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-[#22252e]">
                 <CardHeader>
                   <CardTitle>Herramientas</CardTitle>
                   <CardDescription>Herramientas y entornos de desarrollo</CardDescription>

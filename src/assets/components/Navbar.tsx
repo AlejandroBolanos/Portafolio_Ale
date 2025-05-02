@@ -15,7 +15,7 @@ export function Navbar() {
   ]
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-40 w-full  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between ">
         <div className="flex items-center gap-2">
           <a href="/" className="font-bold text-xl">
@@ -24,13 +24,13 @@ export function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6 ">
+        <nav className="hidden md:flex gap-6 items-center ">
           {navItems.map((item) => (
             <a key={item.name} href={item.href} className="text-sm font-medium transition-colors hover:text-primary">
               {item.name}
             </a>
           ))}
-          <Button asChild>
+          <Button variant="customRed" asChild>
             <a href="/imgs/Alejandro_Robles_CV.pdf" download>
               Descargar CV
             </a>
@@ -46,7 +46,7 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
-            <nav className="flex flex-col gap-4 mt-8">
+            <nav className="flex flex-col gap-4 mt-8 px-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -56,11 +56,13 @@ export function Navbar() {
                   {item.name}
                 </a>
               ))}
-              <Button asChild className="mt-4">
+              <div className="flex flex-col gap-4  px-12">
+              <Button variant={"customRed"} asChild className="mt-4">
             <a href="/imgs/Alejandro_Robles_CV.pdf" download>
               Descargar CV
             </a>
           </Button>
+              </div>
             </nav>
           </SheetContent>
         </Sheet>

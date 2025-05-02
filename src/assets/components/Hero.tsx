@@ -5,8 +5,8 @@ import SocialLinks from "./SocialLinks"
 
 export function Hero() {
   return (
-    <section className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-muted/40">
-
+    <section className="relative w-full py-12 md:py-24 lg:py-27 overflow-hidden mt-2 rounded-2xl bg-[#22252e]">
+{/* 353B84 */}
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           {/* Content Column */}
@@ -75,10 +75,10 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Tech stack badges - optional */}
-        <div className="mt-3 flex flex-wrap justify-center gap-4">
+        {/* Tech stack badges - optional 912fa0*/}
+        <div className="mt-3 flex flex-wrap justify-center gap-4 ">
           {["JavaScript", "Laravel", "PHP", "React", "Java", "Vite"].map((tech) => (
-            <div key={tech} className="rounded-full bg-background px-4 py-1 text-sm font-medium shadow-sm border">
+            <div key={tech} className="rounded-full px-4 py-1 text-sm font-medium shadow-sm border bg-[#912fa0] text-white hover:bg-[#7f2c8b]">
               {tech}
             </div>
           ))}

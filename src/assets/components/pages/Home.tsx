@@ -8,7 +8,8 @@ import { Experience } from "../Experience"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen "> 
+    {/* #677E8A ABAFB5 AAABAD 606467 313B44 E62815 = c42213*/}
       <Navbar />
       <main>
         <Hero />
