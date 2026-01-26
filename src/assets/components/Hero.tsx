@@ -15,12 +15,12 @@ export function Hero() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 Alejandro Robles Bolaños
               </h1>
-              <p className="text-xl text-muted-foreground">Desarrollador Web Full Stack</p>
+              <p className="text-xl text-muted-foreground">Desarrollador Web</p>
             </div>
             <div className="max-w-[600px] text-muted-foreground md:text-xl">
               <p>
-                Soy un desarrollador web apasionado por crear experiencias digitales excepcionales. Enfocado
-                principalmente en el desarrollo Back-End.
+                Creo experiencias digitales centradas en el usuario, combinando desarrollo web
+                con principios de diseño UX para soluciones que realmente funcionan.
               </p>
             </div>
             <div className="flex flex-col gap-1">
@@ -63,8 +63,8 @@ export function Hero() {
                   <p className="text-muted-foreground">- ready started server on 0.0.0.0:3000</p>
                   <p className="text-green-500">✓ Compiled successfully</p>
                   <div className="mt-1 flex items-center gap-2">
-                    <Code className="h-4 w-4 text-primary" />
-                    <p >Desarrollando soluciones web...</p>
+                    <Code className="h-4 w-4 text-primary" aria-hidden="true" />
+                    <p>Desarrollando experiencias de usuario...</p>
                   </div>
                 </div>
                 <div className="mt-2 flex items-center">
@@ -75,10 +75,10 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Tech stack badges - optional 912fa0*/}
-        <div className="mt-3 flex flex-wrap justify-center gap-4 ">
-          {["JavaScript", "Laravel", "PHP", "React", "Java", "Vite"].map((tech) => (
-            <div key={tech} className="rounded-full px-4 py-1 text-sm font-medium shadow-sm border bg-[#912fa0] text-white hover:bg-[#7f2c8b]">
+        {/* Tech stack badges */}
+        <div className="mt-3 flex flex-wrap justify-center gap-4" role="list" aria-label="Tecnologías principales">
+          {["JavaScript", "React", "Laravel", "Figma", "MySQL", "Tailwind"].map((tech) => (
+            <div key={tech} role="listitem" className="rounded-full px-4 py-1 text-sm font-medium shadow-sm border bg-[#912fa0] text-white hover:bg-[#7f2c8b] transition-colors">
               {tech}
             </div>
           ))}

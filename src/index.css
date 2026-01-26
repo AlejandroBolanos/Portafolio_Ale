@@ -118,3 +118,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mejoras de accesibilidad */
+@layer utilities {
+  /* Focus visible mejorado para accesibilidad */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#912fa0] focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  /* Reducir movimiento para usuarios que lo prefieren */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Mejorar contraste del texto muted en dark mode */
+  .dark .text-muted-foreground {
+    color: oklch(0.75 0 0);
+  }
+}
+
+/* Estilos para scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
