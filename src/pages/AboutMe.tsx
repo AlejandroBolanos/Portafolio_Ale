@@ -40,13 +40,13 @@ export default function AboutMe() {
         <div className="container px-4 md:px-6">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#912fa0] rounded-sm"
+            className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#912fa0] rounded-sm"
           >
             <ArrowLeft className="h-4 w-4" />
             Volver al inicio
           </Link>
 
-          <div className="max-w-3xl">
+          <div className="w-full flex flex-col ">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">
               Sobre Mí
             </h1>
@@ -129,7 +129,7 @@ export default function AboutMe() {
           <h2 id="soft-skills-heading" className="text-3xl font-bold tracking-tighter mb-4">
             Habilidades Blandas
           </h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl">
+          <p className="text-muted-foreground mb-8 w-full">
             Las habilidades interpersonales que me permiten colaborar efectivamente y crear mejores experiencias de usuario.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -11,7 +11,7 @@ export interface Project {
   problema: string;
   proceso: {
     investigacion?: string;
-    wireframes?: string;
+    desarrollo?: string;
     prototipo?: string;
     testing?: string;
   };
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     problema: "Los freelancers en Costa Rica carecen de una plataforma local que les permita ofrecer sus servicios de manera profesional y ser contratados por clientes que buscan talento nacional.",
     proceso: {
       investigacion: "Se realizaron entrevistas con freelancers locales para entender sus necesidades y frustraciones con plataformas existentes como Fiverr o Upwork.",
-      wireframes: "Se diseñaron wireframes de baja fidelidad para el flujo de registro, publicación de servicios y contratación.",
+      desarrollo: "Se implementó el frontend con React y el backend con Laravel, incluyendo la integración con bases de datos MySQL.",
       prototipo: "Se creó un prototipo interactivo en Figma para validar la navegación y la experiencia del usuario.",
       testing: "Se realizaron pruebas de usabilidad con 5 usuarios para identificar puntos de fricción en el proceso de contratación."
     },
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     problema: "Una cadena de hoteles necesitaba un sistema de base de datos robusto que permitiera gestionar reservaciones, clientes y reportes de manera eficiente y segura.",
     proceso: {
       investigacion: "Se analizaron los procesos de negocio de la cadena hotelera para identificar entidades y relaciones clave.",
-      wireframes: "Se diseñó el modelo entidad-relación y se definieron los flujos de datos principales.",
+      desarrollo: "Se diseñó e implementó la base de datos en Oracle 21C, incluyendo procedimientos almacenados y triggers para auditoría.",
       prototipo: "Se implementó un prototipo de base de datos con datos de prueba para validar el diseño.",
       testing: "Se realizaron pruebas de rendimiento y se validó la integridad de los datos con diferentes escenarios."
     },
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     problema: "La academia de karate necesitaba un sistema que permitiera gestionar torneos, llevar el puntaje en tiempo real y generar llaves de competencia de forma automática.",
     proceso: {
       investigacion: "Se observaron torneos presenciales para entender el flujo de competencia y las necesidades de jueces y organizadores.",
-      wireframes: "Se diseñaron wireframes para la pantalla de puntaje, generación de llaves y panel de administración.",
+      desarrollo: "Se implementó el frontend con React y el backend con Laravel, incluyendo la integración con bases de datos MySQL y WebSockets para la actualización en tiempo real.",
       prototipo: "Se creó un prototipo funcional de la pantalla de puntaje en tiempo real para validar con los instructores.",
       testing: "Se realizó una prueba piloto durante un torneo interno para validar el sistema en condiciones reales."
     },
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     problema: "Los estudiantes universitarios tienen dificultades para organizar sus tareas, eventos y actividades académicas de manera efectiva.",
     proceso: {
       investigacion: "Se realizaron encuestas a estudiantes para entender cómo gestionaban actualmente sus actividades académicas.",
-      wireframes: "Se diseñaron flujos de usuario para la creación de tareas, eventos y recordatorios.",
+      desarrollo: "Se implementó el frontend con React y el backend con PHP, incluyendo la integración con bases de datos MySQL.",
       prototipo: "Se desarrolló un MVP funcional para validar las funcionalidades principales.",
       testing: "Se realizaron pruebas con un grupo de estudiantes durante un semestre académico."
     },
@@ -153,8 +153,8 @@ export const projects: Project[] = [
     problema: "Un restaurante hipotético necesitaba una presencia web profesional con capacidad de gestionar pedidos, reservas y mostrar su menú en múltiples idiomas.",
     proceso: {
       investigacion: "Se analizaron sitios web de restaurantes exitosos para identificar las mejores prácticas de UX.",
-      wireframes: "Se diseñaron mockups de las páginas principales: inicio, menú, reservas y pedidos.",
       prototipo: "Se desarrolló un prototipo HTML/CSS para validar el diseño visual.",
+      desarrollo: "Se implementó el backend con PHP y MySQL para gestionar reservas y pedidos.",
       testing: "Se realizaron pruebas de usabilidad para validar el flujo de reservas y pedidos."
     },
     hallazgos: [

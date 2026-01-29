@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Alejandro Robles Bolaños",
-  title: "Desarrollador Web & Diseñador UX",
+  title: "Desarrollador Web",
   email: "alejandrorb0803@gmail.com",
   phone: "+506 85119661",
   location: "Costa Rica",
@@ -47,10 +47,10 @@ export const interests = {
     "Automatización y DevOps"
   ],
   hobbies: [
-    "Karate - Practicante activo",
+    "Fútbol - Practicante activo",
     "Aprender nuevas tecnologías",
-    "Contribuir a proyectos open source",
-    "Leer sobre diseño y UX",
+    "Cocinar",
+    "Leer sobre ciencia y tecnología",
     "Videojuegos"
   ],
   proyectosQueMeApasionan: [

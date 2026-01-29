@@ -33,7 +33,7 @@ export default function ProjectDetail() {
         <div className="container px-4 md:px-6">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#912fa0] rounded-sm"
+            className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#912fa0] rounded-sm"
           >
             <ArrowLeft className="h-4 w-4" />
             Volver a proyectos
@@ -114,7 +114,7 @@ export default function ProjectDetail() {
 
       {/* Herramientas */}
       <section aria-labelledby="herramientas-heading" className="py-12 md:py-16">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 w-full flex flex-col items-center">
           <h2 id="herramientas-heading" className="text-2xl font-bold tracking-tighter mb-6 flex items-center gap-2">
             <Wrench className="h-6 w-6 text-[#912fa0]" />
             Herramientas Utilizadas
@@ -167,23 +167,23 @@ export default function ProjectDetail() {
                 </CardContent>
               </Card>
             )}
-            {project.proceso.wireframes && (
+            {project.proceso.desarrollo && (
               <Card className="bg-[#22252e]">
                 <CardHeader>
-                  <CardTitle className="text-lg">2. Wireframes</CardTitle>
+                  <CardTitle className="text-lg">2. Prototipado</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{project.proceso.wireframes}</p>
+                  <p className="text-muted-foreground">{project.proceso.prototipo}</p>
                 </CardContent>
               </Card>
             )}
             {project.proceso.prototipo && (
               <Card className="bg-[#22252e]">
                 <CardHeader>
-                  <CardTitle className="text-lg">3. Prototipado</CardTitle>
+                  <CardTitle className="text-lg">3. Desarrollo</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{project.proceso.prototipo}</p>
+                  <p className="text-muted-foreground">{project.proceso.desarrollo}</p>
                 </CardContent>
               </Card>
             )}

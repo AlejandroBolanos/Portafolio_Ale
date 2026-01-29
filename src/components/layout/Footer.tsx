@@ -19,7 +19,7 @@ export function Footer() {
         <div className="space-y-4">
           <h3 className="text-xl font-bold">Mi Portafolio</h3>
           <p className="text-muted-foreground">
-            Desarrollador web y diseñador UX especializado en crear experiencias digitales excepcionales.
+            Desarrollador web especializado en crear experiencias digitales excepcionales.
           </p>
           <div className="flex gap-4">
             <a
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
         <div className="space-y-4">
           <h3 className="text-xl font-bold">Enlaces</h3>
-          <nav aria-label="Enlaces del pie de página" className="flex flex-col gap-2">
+          <nav aria-label="Enlaces del pie de página" className="flex flex-col gap-2 items-center">
             <Link
               to="/"
               className="text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#912fa0] rounded-sm w-fit"

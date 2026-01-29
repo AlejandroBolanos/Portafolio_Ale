@@ -39,7 +39,6 @@ export const technicalSkills = {
     { name: "Cisco-Packet Tracer", level: "Intermedio" },
     { name: "Microsoft Office", level: "Avanzado" },
     { name: "Power BI", level: "Intermedio" },
-    { name: "Visual Studio Code", level: "Avanzado" },
     { name: "AWS", level: "Intermedio" },
   ] as Skill[],
   ux: [
