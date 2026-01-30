@@ -23,6 +23,8 @@ export interface Project {
   liveUrl?: string;
   // Tags
   tags: string[];
+  // Imágenes
+  imagenes: string[];
 }
 
 export const projects: Project[] = [
@@ -53,7 +55,8 @@ export const projects: Project[] = [
       "Feedback positivo de usuarios en pruebas de usabilidad"
     ],
     githubUrl: "https://github.com/TottoWolff/Ticolancer-Desarrollo",
-    tags: ["React", "Tailwind", "MySQL", "Laravel", "PHP", "Vite", "JavaScript", "Cypress"]
+    tags: ["React", "Tailwind", "MySQL", "Laravel", "PHP", "Vite", "JavaScript", "Cypress"],
+    imagenes: ["/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg"]
   },
   {
     id: "gestion-hotelera",
@@ -82,7 +85,8 @@ export const projects: Project[] = [
       "Dashboards interactivos que facilitan la toma de decisiones"
     ],
     githubUrl: "https://lucid.app/lucidchart/144e214c-895b-412b-b7e0-7e3b2d980202/edit?viewport_loc=-3602%2C-4143%2C10036%2C4615%2C0_0&invitationId=inv_d5c6ebeb-c4b2-48ad-92af-89e740822abb",
-    tags: ["Oracle 21C", "SQL", "R-MAN", "Power BI", "PL/SQL", "SQL_Dev"]
+    tags: ["Oracle 21C", "SQL", "R-MAN", "Power BI", "PL/SQL", "SQL_Dev"],
+    imagenes: ["/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg"]
   },
   {
     id: "sistema-karate",
@@ -111,7 +115,8 @@ export const projects: Project[] = [
       "Mejora en la experiencia de espectadores con pantallas en tiempo real"
     ],
     githubUrl: "https://github.com/AlejandroBolanos/Karate-Scoreboard",
-    tags: ["React", "Tailwind", "MySQL", "Laravel", "PHP", "Vite"]
+    tags: ["React", "Tailwind", "MySQL", "Laravel", "PHP", "Vite"],
+    imagenes: ["/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg"]
   },
   {
     id: "eventmate",
@@ -140,7 +145,8 @@ export const projects: Project[] = [
       "Feedback positivo sobre la facilidad de uso"
     ],
     githubUrl: "https://github.com/AlejandroBolanos/eventmate_frontend",
-    tags: ["React", "CSS", "MySQL", "PHP", "Ajax", "Vite"]
+    tags: ["React", "CSS", "MySQL", "PHP", "Ajax", "Vite"],
+    imagenes: ["/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg"]
   },
   {
     id: "le-gourmet-parisien",
@@ -169,7 +175,8 @@ export const projects: Project[] = [
       "Soporte para múltiples idiomas implementado"
     ],
     githubUrl: "https://github.com/AlejandroBolanos/backend-pagina-web",
-    tags: ["HTML", "CSS", "MySQL", "PHP", "JavaScript"]
+    tags: ["HTML", "CSS", "MySQL", "PHP", "JavaScript"],
+    imagenes: ["/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg", "/src/assets/components/placeholder.jpg"]
   }
 ];
 

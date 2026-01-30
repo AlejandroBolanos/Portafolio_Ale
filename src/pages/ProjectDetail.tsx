@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import {
   ArrowLeft,
@@ -10,7 +11,10 @@ import {
   Search,
   Lightbulb,
   CheckCircle,
-  Target
+  Target,
+  Image,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/assets/components/ui/card";
 import { Badge } from "@/assets/components/ui/badge";
@@ -22,9 +26,21 @@ export default function ProjectDetail() {
   const project = id ? getProjectById(id) : undefined;
   const navigation = id ? getProjectNavigation(id) : { prev: null, next: null };
 
+  const [currentImage, setCurrentImage] = useState(0);
+
   if (!project) {
     return <Navigate to="/" replace />;
   }
+
+  const prevImage = useCallback(() =>
+    setCurrentImage((i) => (i > 0 ? i - 1 : project.imagenes.length - 1)), [project.imagenes.length]);
+  const nextImage = useCallback(() =>
+    setCurrentImage((i) => (i < project.imagenes.length - 1 ? i + 1 : 0)), [project.imagenes.length]);
+
+  useEffect(() => {
+    const timer = setInterval(nextImage, 4000);
+    return () => clearInterval(timer);
+  }, [nextImage]);
 
   return (
     <article className="min-h-screen">
@@ -150,7 +166,7 @@ export default function ProjectDetail() {
       </section>
 
       {/* Proceso UX */}
-      <section aria-labelledby="proceso-heading" className="py-12 md:py-16">
+      <section aria-labelledby="proceso-heading" className="py-12 md:py-10">
         <div className="container px-4 md:px-6">
           <h2 id="proceso-heading" className="text-2xl font-bold tracking-tighter mb-8 flex items-center gap-2">
             <Search className="h-6 w-6 text-[#912fa0]" />
@@ -201,8 +217,61 @@ export default function ProjectDetail() {
         </div>
       </section>
 
+
+      {/* Carrusel de imágenes */}
+      <section aria-labelledby="imagenes-heading" className="py-12 md:py-1">
+        <div className="container px-4 md:px-6">
+          <h2 id="imagenes-heading" className="text-2xl font-bold tracking-tighter mb-6 flex items-center gap-2">
+            <Image className="h-6 w-6 text-[#912fa0]" />
+            Imágenes del Proyecto
+          </h2>
+          <div className="relative overflow-hidden rounded-lg bg-[#22252e] max-w-3xl mx-auto">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentImage * 100}%)` }}
+            >
+              {project.imagenes.map((imagen, index) => (
+                <div key={index} className="min-w-full p-4 flex justify-center">
+                  <img
+                    src={imagen}
+                    alt={`Imagen ${index + 1} del proyecto`}
+                    className="w-full max-h-[450px] rounded-lg object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+            <button
+              onClick={prevImage}
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#912fa0] text-white rounded-full p-2 transition-colors"
+              aria-label="Imagen anterior"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#912fa0] text-white rounded-full p-2 transition-colors"
+              aria-label="Imagen siguiente"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="flex justify-center gap-2 mt-4">
+            {project.imagenes.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImage(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                  index === currentImage ? "bg-[#912fa0]" : "bg-gray-600 hover:bg-gray-400"
+                }`}
+                aria-label={`Ir a imagen ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Hallazgos */}
-      <section aria-labelledby="hallazgos-heading" className="py-12 md:py-16 bg-[#22252e]/50">
+      <section aria-labelledby="hallazgos-heading" className="py-12 md:py-16 bg-[#22252e]/50 mt-10">
         <div className="container px-4 md:px-6">
           <h2 id="hallazgos-heading" className="text-2xl font-bold tracking-tighter mb-6 flex items-center gap-2">
             <Lightbulb className="h-6 w-6 text-[#912fa0]" />

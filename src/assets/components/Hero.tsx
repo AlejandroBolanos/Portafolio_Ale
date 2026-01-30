@@ -12,12 +12,12 @@ export function Hero() {
           {/* Content Column */}
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-left">
                 Alejandro Robles Bolaños
               </h1>
-              <p className="text-xl text-muted-foreground">Desarrollador Web</p>
+              <p className="text-xl text-muted-foreground text-left">Desarrollador Web</p>
             </div>
-            <div className="max-w-[600px] text-muted-foreground md:text-xl">
+            <div className="max-w-[600px] text-muted-foreground md:text-xl text-left">
               <p>
                 Creo experiencias digitales centradas en el usuario, combinando desarrollo web
                 con principios de diseño UX para soluciones que realmente funcionan.

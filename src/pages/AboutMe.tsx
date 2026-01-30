@@ -63,7 +63,7 @@ export default function AboutMe() {
           <h2 id="historia-heading" className="text-3xl font-bold tracking-tighter mb-8">
             Mi Historia
           </h2>
-          <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
+          <div className="grid gap-8 lg:grid-cols-[2fr_1fr] text-left">
             <div className="space-y-4">
               {aboutMe.historia.split("\n\n").map((paragraph, index) => (
                 <p key={index} className="text-muted-foreground text-lg leading-relaxed">
@@ -83,40 +83,6 @@ export default function AboutMe() {
                 <p><strong>Ubicación:</strong> {personalInfo.location}</p>
                 <p><strong>Rol:</strong> {personalInfo.title}</p>
                 <p><strong>Formación:</strong> Informática y Tecnología Multimedia - UCR</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Mi Enfoque */}
-      <section aria-labelledby="enfoque-heading" className="py-12 md:py-16 bg-[#22252e]/50">
-        <div className="container px-4 md:px-6">
-          <h2 id="enfoque-heading" className="text-3xl font-bold tracking-tighter mb-8">
-            Mi Enfoque
-          </h2>
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="space-y-4">
-              {aboutMe.enfoque.split("\n\n").map((paragraph, index) => (
-                <p key={index} className="text-muted-foreground text-lg leading-relaxed">
-                  {paragraph.trim()}
-                </p>
-              ))}
-            </div>
-            <Card className="bg-[#22252e]">
-              <CardHeader>
-                <CardTitle>Mi Filosofía</CardTitle>
-                <CardDescription>Principios que guían mi trabajo</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {aboutMe.filosofia.map((principio, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <span className="text-[#912fa0] mt-1">✓</span>
-                      <span>{principio}</span>
-                    </li>
-                  ))}
-                </ul>
               </CardContent>
             </Card>
           </div>
@@ -149,6 +115,39 @@ export default function AboutMe() {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+      {/* Mi Enfoque */}
+      <section aria-labelledby="enfoque-heading" className="py-12 md:py-16 bg-[#22252e]/50">
+        <div className="container px-4 md:px-6">
+          <h2 id="enfoque-heading" className="text-3xl font-bold tracking-tighter mb-8">
+            Mi Enfoque
+          </h2>
+          <div className="grid gap-8 lg:grid-cols-2 text-left">
+            <div className="space-y-4">
+              {aboutMe.enfoque.split("\n\n").map((paragraph, index) => (
+                <p key={index} className="text-muted-foreground text-lg leading-relaxed">
+                  {paragraph.trim()}
+                </p>
+              ))}
+            </div>
+            <Card className="bg-[#22252e]">
+              <CardHeader>
+                <CardTitle>Mi Filosofía</CardTitle>
+                <CardDescription>Principios que guían mi trabajo</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {aboutMe.filosofia.map((principio, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-[#912fa0] mt-1">✓</span>
+                      <span>{principio}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -331,7 +330,7 @@ export default function AboutMe() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">{job.description}</p>
-                  <div>
+                  <div className="text-center">
                     <h4 className="font-medium mb-2">Logros principales:</h4>
                     <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
                       {job.achievements.map((achievement, i) => (
